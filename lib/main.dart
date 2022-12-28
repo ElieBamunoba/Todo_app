@@ -14,8 +14,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'TODO App',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+          primaryColor: const Color(0xff000a1f),
+          primarySwatch: Colors.blue,
+          appBarTheme: const AppBarTheme(
+            color: Color(0xff000a1f),
+          )),
       home: const TodosScreen(title: 'TODO App'),
     );
   }

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../../../models/todos_model.dart';
+import '../../widgets/todo_card.dart';
+
 class TodosScreen extends StatelessWidget {
   const TodosScreen({super.key, required this.title});
 
@@ -10,26 +13,41 @@ class TodosScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(title),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.add),
+          )
+        ],
       ),
-      body: Center(
+      body: Container(
+        margin: const EdgeInsets.all(10),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             const Text(
-              'You have pushed the button this many times:',
+              'Pending TO DOs:',
+              style: TextStyle(
+                fontSize: 25,
+                fontWeight: FontWeight.bold,
+              ),
             ),
-            Text(
-              '10',
-              style: Theme.of(context).textTheme.headline4,
+            const SizedBox(
+              height: 20,
             ),
+            ListView.builder(
+                shrinkWrap: true,
+                itemCount: Todo.todos.length,
+                itemBuilder: (BuildContext context, int index) {
+                  return TodoCard(
+                    todo: Todo.todos[index],
+                  );
+                })
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
