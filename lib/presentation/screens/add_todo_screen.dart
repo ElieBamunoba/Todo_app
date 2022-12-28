@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:todo_app/presentation/widgets/text_field.dart';
 
-import '../../../blocs/todo/todos_bloc.dart';
-import '../../../models/todos_model.dart';
-import '../../widgets/todo_card.dart';
+import '../../blocs/todo/todos_bloc.dart';
+import '../../models/todos_model.dart';
+import '../widgets/todo_card.dart';
 
 class AddTodoScreen extends StatelessWidget {
   const AddTodoScreen({super.key, required this.title});

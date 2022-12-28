@@ -1,8 +1,8 @@
 //Routes Names
 import 'package:flutter/material.dart';
 
-import '../screens/todos/todos_screen.dart';
-import '../screens/add_todo/add_todo_screen.dart';
+import '../screens/todos_screen.dart';
+import '../screens/add_todo_screen.dart';
 
 const String todosScreen = 'Todos';
 const String addTodoScreen = 'AddTodo';

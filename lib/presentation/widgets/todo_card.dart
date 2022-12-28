@@ -33,7 +33,9 @@ class TodoCard extends StatelessWidget {
                 IconButton(
                   onPressed: () {
                     context.read<TodosBloc>().add(
-                          UpdateTodo(todo: todo.copyWith(isCompleted: true)),
+                          UpdateTodo(
+                            todo: todo.copyWith(isCompleted: true),
+                          ),
                         );
                   },
                   icon: const Icon(Icons.add_task),
