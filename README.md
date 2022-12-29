@@ -2,15 +2,8 @@
 
 A new Flutter project.
 
-## Getting Started
+## A simple TODO app using the Bloc Architecture and bloc patterns.
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Screenshot_1672310810](https://user-images.githubusercontent.com/78250384/209940949-b5d4f1cf-94d7-46a4-abb9-5b2d30702464.png)
+![Screenshot_1672310823](https://user-images.githubusercontent.com/78250384/209940952-6f690618-6403-4a03-8154-a642dc2479a9.png)
+![Screenshot_1672310827](https://user-images.githubusercontent.com/78250384/209940956-109213ec-cba2-48ca-b887-852eadf9e298.png)
