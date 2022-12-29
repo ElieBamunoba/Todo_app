@@ -28,26 +28,34 @@ class TodoCard extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            Row(
-              children: [
-                IconButton(
-                  onPressed: () {
-                    context.read<TodosBloc>().add(
-                          UpdateTodo(
-                            todo: todo.copyWith(isCompleted: true),
-                          ),
-                        );
-                  },
-                  icon: const Icon(Icons.add_task),
-                ),
-                IconButton(
-                  onPressed: () {
-                    context.read<TodosBloc>().add(DeleteTodo(todo: todo));
-                  },
-                  icon: const Icon(Icons.cancel),
-                ),
-              ],
-            )
+            BlocBuilder<TodosBloc, TodosState>(
+              builder: (context, state) {
+                return Row(
+                  children: [
+                    IconButton(
+                      onPressed: () {
+                        context.read<TodosBloc>().add(
+                              UpdateTodo(
+                                todo: todo.copyWith(isCompleted: true),
+                              ),
+                            );
+                      },
+                      icon: const Icon(Icons.add_task),
+                    ),
+                    IconButton(
+                      onPressed: () {
+                        context.read<TodosBloc>().add(
+                              DeleteTodo(
+                                todo: todo.copyWith(isCancelled: true),
+                              ),
+                            );
+                      },
+                      icon: const Icon(Icons.cancel),
+                    ),
+                  ],
+                );
+              },
+            ),
           ],
         ),
       ),

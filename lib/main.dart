@@ -22,9 +22,10 @@ class MyApp extends StatelessWidget {
           create: (context) => TodosBloc()
             ..add(LoadTodos(todos: [
               Todo(
-                  id: '1',
-                  task: 'Sample Todo 1',
-                  description: 'This is a test Todo'),
+                id: '1',
+                task: 'Sample Todo 1',
+                description: 'This is a test Todo',
+              ),
               Todo(
                   id: '2',
                   task: 'Sample Todo 2',

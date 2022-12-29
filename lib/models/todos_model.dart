@@ -1,17 +1,25 @@
 import 'package:equatable/equatable.dart';
 
+import 'package:equatable/equatable.dart';
+
 class Todo extends Equatable {
   final String id;
   final String task;
   final String description;
   bool? isCompleted;
   bool? isCancelled;
-  Todo(
-      {required this.id,
-      required this.task,
-      required this.description,
-      this.isCancelled,
-      this.isCompleted});
+
+  Todo({
+    required this.id,
+    required this.task,
+    required this.description,
+    this.isCompleted,
+    this.isCancelled,
+  }) {
+    isCompleted = isCompleted ?? false;
+    isCancelled = isCancelled ?? false;
+  }
+
   Todo copyWith({
     String? id,
     String? task,
@@ -36,7 +44,6 @@ class Todo extends Equatable {
         isCompleted,
         isCancelled,
       ];
-
   static List<Todo> todos = [
     Todo(id: '1', task: 'Sample Todo 1', description: 'This is a test Todo'),
     Todo(id: '2', task: 'Sample Todo 2', description: 'This is a test Todo'),

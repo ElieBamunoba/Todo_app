@@ -25,9 +25,6 @@ class Todos extends StatelessWidget {
             ),
           );
         } else if (state is TodosFilterLoaded) {
-          print(
-            state.filteredTodos,
-          );
           return Container(
             margin: const EdgeInsets.all(10),
             child: Column(
