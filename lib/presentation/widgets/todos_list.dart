@@ -14,7 +14,16 @@ class Todos extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<TodosFilterBloc, TodosFilterState>(
+    return BlocConsumer<TodosFilterBloc, TodosFilterState>(
+      listener: (context, state) {
+        if (state is TodosFilterLoaded) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+                content: Text('${state.filteredTodos.length} todos in here'),
+                duration: const Duration(seconds: 1)),
+          );
+        }
+      },
       builder: (context, state) {
         if (state is TodosFilterLoading) {
           return const Center(
