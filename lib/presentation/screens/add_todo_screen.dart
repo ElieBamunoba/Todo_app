@@ -4,7 +4,6 @@ import 'package:todo_app/presentation/widgets/text_field.dart';
 
 import '../../blocs/todo/todos_bloc.dart';
 import '../../models/todos_model.dart';
-import '../widgets/todo_card.dart';
 
 class AddTodoScreen extends StatelessWidget {
   const AddTodoScreen({super.key, required this.title});
@@ -52,9 +51,7 @@ class AddTodoScreen extends StatelessWidget {
                     backgroundColor: Theme.of(context).primaryColor,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10))),
-                child: const Text(
-                  'Add Todo',
-                ),
+                child: const Text('Add Todo'),
               )
             ],
           ),
